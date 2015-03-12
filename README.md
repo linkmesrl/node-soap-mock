@@ -40,4 +40,4 @@ You can provide any kind of function to your configuration, and mange all the va
 
 - Translate comment in English
 - Add more assertion to prevent configuration errors.
-- Provide a simpler (but still flexible) method of configuration
+- Provide a simpler (but still flexible) method of configuration, in first instace add an XML parser for `xml` input in `config` functions.
