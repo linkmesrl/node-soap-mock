@@ -39,4 +39,5 @@ You can provide any kind of function to your configuration, and mange all the va
 ### To do:
 
 - Translate comment in English
+- Add more assertion to prevent configuration errors.
 - Provide a simpler (but still flexible) method of configuration
