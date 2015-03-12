@@ -8,7 +8,13 @@ var config = {
             createUser: function(xml, callback){
                 callback(null, xml);
             },
-            retrieveUserInformation: {}
+        }
+    },
+    MoneyInService: {
+        MoneyInService: {
+            chargeEWallet: function(xml, callback){
+                callback(null, xml);
+            }
         }
     }
 };
@@ -29,9 +35,17 @@ describe('The Node Soap Mock', function(){
     });
 
     it('should respond to a createUser call', function(done){
-        console.log(_client);
         _client.UserService.UserServicePort.createUser('fake XML', function(err, res){
             expect(res).not.to.be.null;
+            done();
+        });
+    });
+
+    it('should set setSecurity on a client', function(done){
+        soap.createClient('MoneyInService?wsdl', function(err, client){
+            expect(client).not.to.be.null;
+            expect(client.describe()).not.to.be.null;
+            client.setSecurity({_username: 'username', _password: 'password'});
             done();
         });
     });
