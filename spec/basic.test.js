@@ -1,6 +1,6 @@
 'use strict';
 
-require('../../../test/test_helper');
+require('./test_helper.js');
 
 var config = {
     UserService: {        
@@ -19,7 +19,7 @@ var config = {
     }
 };
 
-var soap = require('./index')(config);
+var soap = require('./../index')(config);
 
 describe('The Node Soap Mock', function(){
 
@@ -27,6 +27,7 @@ describe('The Node Soap Mock', function(){
 
     it('should create a fake client', function(done){
         soap.createClient('UserService?wsdl', function(err, client){
+            console.log(client);
             expect(client).not.to.be.null;
             expect(client.describe()).not.to.be.null;
             _client = client;

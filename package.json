@@ -1,0 +1,28 @@
+{
+  "name": "node-soap-mock",
+  "version": "1.0.0",
+  "description": "A simple request mocker for node-soap",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:mm_milano/node-soap-mock.git"
+  },
+  "keywords": [
+    "node",
+    "sopa",
+    "mock"
+  ],
+  "author": "Matteo Scandolo",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.6.0"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  }
+}
