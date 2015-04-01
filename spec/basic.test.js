@@ -5,14 +5,15 @@ require('./test_helper.js');
 var config = {
     UserService: {        
         UserServicePort: {
-            createUser: function(xml, callback){
-                callback(null, xml);
+            // TODO spread the args
+            createUser: function(args){
+                args[1](null, args[0]);
             },
         }
     },
     MoneyInService: {
         MoneyInService: {
-            chargeEWallet: function(xml, callback){
+            chargeEWallet: function(args){
                 callback(null, xml);
             }
         }
@@ -27,7 +28,6 @@ describe('The Node Soap Mock', function(){
 
     it('should create a fake client', function(done){
         soap.createClient('UserService?wsdl', function(err, client){
-            console.log(client);
             expect(client).not.to.be.null;
             expect(client.describe()).not.to.be.null;
             _client = client;
