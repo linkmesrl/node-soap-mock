@@ -4,7 +4,7 @@
   "description": "A simple request mocker for node-soap",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha spec/"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   "author": "Matteo Scandolo",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.6.0"
+    "lodash": "^3.6.0",
+    "nodexml": "^1.0.2"
   },
   "devDependencies": {
     "chai": "^2.2.0",

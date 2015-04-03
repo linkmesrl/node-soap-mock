@@ -4,6 +4,7 @@ var _config;
 
 var _ = require('lodash');
 var assert = require('assert');
+var nodeXml = require('nodexml');
 
 // getServiceName
 // --------------
@@ -99,7 +100,7 @@ var preProcessing = function(funcs, f) {
 module.exports = function(config){
 
     var processedConfig = preProcessing(config, function (input, cb) {
-        return [input, cb];
+        return [nodeXml.xml2obj(input), cb];
     });
     _config = processedConfig;
     return exports;
