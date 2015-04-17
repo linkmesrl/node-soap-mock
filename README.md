@@ -2,6 +2,8 @@
 
 This is a small module to mock SOAP request made with [Node Soap](https://github.com/vpulim/node-soap).
 
+[![Build Status](https://travis-ci.org/linkmesrl/node-soap-mock.svg?branch=master)](https://travis-ci.org/linkmesrl/node-soap-mock)
+
 ## Configuration
 
 You should provide an object with your WSDL methods and functions, es:
